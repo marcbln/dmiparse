@@ -32,14 +32,14 @@ System Information
 
 
 
-In [8]: from dmiparse import parse_dmi
+In [8]: from dmiparse import dmiparse
 
-In [9]: parse_dmi(sample1)
+In [9]: dmiparse(sample1)
 Out[9]: {'System Information': <dmiparse.Section at 0x7f88b0a5add8>}
 
 In [10]: from json import dumps
 
-In [11]: print(dumps(parse_dmi(sample1), default=lambda o: o.__dict__, indent=4))
+In [11]: print(dumps(dmiparse(sample1), default=lambda o: o.__dict__, indent=4))
 {
     "System Information": {
         "props": {
